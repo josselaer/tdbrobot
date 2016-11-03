@@ -1,4 +1,4 @@
-import self.robot
+import Robot
 import time
 from random import randint
 
@@ -18,7 +18,7 @@ class tdb_bot:
 	"""docstring for tdb_bot"""
 	curr_x = 0
 	curr_y = 0
-	self.robot = robot.robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
+	
 
 
 	def __init__(self, x, y):
@@ -26,7 +26,7 @@ class tdb_bot:
 		self.RIGHT_TRIM  = 0
 		self.curr_x = x
 		self.curr_y = y
-
+		self.robot = Robot.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
 
 		
 	def generate_ball(self):
@@ -37,7 +37,7 @@ class tdb_bot:
 		ball.append(y)
 		return ball
 
-	def move_self.robot(self, ball):
+	def move_robot(self, ball):
 		diff_x = ball[0] - self.curr_x
 		diff_y = ball[1] - self.curr_y
 		print(diff_x)
