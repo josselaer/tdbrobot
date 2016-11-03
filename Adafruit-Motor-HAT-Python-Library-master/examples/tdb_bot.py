@@ -43,22 +43,30 @@ class tdb_bot:
 		print(diff_x)
 		print(diff_y)
 		if(diff_x > 0):
+			print("turnng right")
 			self.robot.right(200,0.3)
 		elif(diff_x < 0):
+			print("left")
 			self.robot.left(200,0.3)
 		self.robot.forward(200,(0.917 * abs(diff_x)))
+		print("forward")
 		if(diff_x > 0):
 			self.robot.left(200,0.3)
+			print("straitening to left")
 		elif(diff_x < 0):
 			self.robot.right(200,0.3)
+			print("straitending to right")
 
 		if(diff_y < 0):
 			self.robot.right(200,0.44)
+			print("turn around")
 
 		self.robot.forward(200,(0.917*abs(diff_y)))
+		print("froward again")
 
 		if(diff_y < 0):
 			self.robot.right(200,0.44)
+			print("straiten if backwards")
 
 		self.curr_x = ball[0]
 		self.curr_y = ball[1]

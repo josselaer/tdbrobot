@@ -1,4 +1,4 @@
-import tdb_bot.py
+import tdb_bot
 
 
 rob = tdb_bot.tdb_bot(0,0)
