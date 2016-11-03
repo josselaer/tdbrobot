@@ -19,6 +19,10 @@ class tdb_bot:
 	curr_x = 0
 	curr_y = 0
 	
+	quarterTurnTime = 0.3
+	halfTurnTime = 0.44
+	oneFootTime = 0.92
+	robotSpeed = 200
 
 
 	def __init__(self, x, y):
@@ -44,28 +48,28 @@ class tdb_bot:
 		print(diff_y)
 		if(diff_x > 0):
 			print("turnng right")
-			self.robot.right(200,0.3)
+			self.robot.right(robotSpeed,quarterTurnTime)
 		elif(diff_x < 0):
 			print("left")
-			self.robot.left(200,0.3)
-		self.robot.forward(200,(0.917 * abs(diff_x)))
+			self.robot.left(robotSpeed,quarterTurnTime)
+		self.robot.forward(robotSpeed,(oneFootTime * abs(diff_x)))
 		print("forward")
 		if(diff_x > 0):
-			self.robot.left(200,0.3)
+			self.robot.left(robotSpeed,quarterTurnTime)
 			print("straitening to left")
 		elif(diff_x < 0):
-			self.robot.right(200,0.3)
+			self.robot.right(robotSpeed,quarterTurnTime)
 			print("straitending to right")
 
 		if(diff_y < 0):
-			self.robot.right(200,0.44)
+			self.robot.right(robotSpeed,halfTurnTime)
 			print("turn around")
 
-		self.robot.forward(200,(0.917*abs(diff_y)))
+		self.robot.forward(robotSpeed,(oneFootTime*abs(diff_y)))
 		print("froward again")
 
 		if(diff_y < 0):
-			self.robot.right(200,0.44)
+			self.robot.right(robotSpeed,halfTurnTime)
 			print("straiten if backwards")
 
 		self.curr_x = ball[0]
