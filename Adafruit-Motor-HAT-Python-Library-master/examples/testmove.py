@@ -1,7 +1,7 @@
 import tdb_bot.py
 
 
-rob = tdb_bot.tdb_bot()
+rob = tdb_bot.tdb_bot(0,0)
 
 ball1 = rob.generate_ball()
 ball2 = rob.generate_ball()
