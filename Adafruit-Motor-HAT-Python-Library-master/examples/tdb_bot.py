@@ -40,6 +40,8 @@ class tdb_bot:
 	def move_robot(self, ball):
 		diff_x = ball[0] - self.curr_x
 		diff_y = ball[1] - self.curr_y
+		print(diff_x)
+		print(diff_y)
 		if(diff_x > 0):
 			robot.right(200,0.3)
 		elif(diff_x < 0:
@@ -60,5 +62,6 @@ class tdb_bot:
 
 		self.curr_x = ball[0]
 		self.curr_y = ball[1]
+
 
 
