@@ -26,7 +26,7 @@ class tdb_bot:
 		self.curr_x = x
 		self.curr_y = y
 		self.robot = Robot.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
-		self.quarterTurnTime = 0.3
+		self.quarterTurnTime = 0.25
 		self.halfTurnTime = 0.44
 		self.oneFootTime = 0.92
 		self.robotSpeed = 200
