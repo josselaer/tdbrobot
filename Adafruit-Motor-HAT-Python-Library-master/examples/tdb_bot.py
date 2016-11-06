@@ -30,8 +30,12 @@ class tdb_bot:
 		self.halfTurnTime = 0.44
 		self.oneFootTime = 0.92
 		self.robotSpeed = 200
-
 		
+	def go_to_origin():
+		origin = [0,0]
+		print("going home")
+		move_robot(origin)
+
 	def generate_ball(self):
 		x = randint(0,9)
 		y = randint(0,9)

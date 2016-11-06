@@ -14,3 +14,5 @@ print(ball2)
 rob.move_robot(ball2)
 print(ball3)
 rob.move_robot(ball3)
+rob.go_to_origin()
+
